@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web studio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@100;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+
+  <body>
+    <h1>Оставьте свои данные, мы вам перезвоним</h1>
+    <form class="form js-speaker-form">
+      <div class="form-field">
+        <label for="name">Имя</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Имя"
+          autofocus
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="tel">Телефон</label>
+        <input type="tel" name="tel" id="tel" placeholder="Телефон" />
+      </div>
+
+      <div class="form-field">
+        <label for="mail">Почта</label>
+        <input type="email" name="mail" id="mail" placeholder="Почта" />
+      </div>
+    <div class="form-field">
+        <label for="comment">Оставьте коментарий</label>
+        <textarea class="comment" name="comment" id="comment" rows="8" placeholder="Уточните детали доклада"></textarea>
+    </div>
+    
+    <div class="form-field">
+        <input type="checkbox" name="policy" id="policy" />
+        <label for="policy">Соглашаюсь с рассылкой и принимаю 
+            <a href="">Условия договора</a>  
+        </label>
+    </div>
+    
+    <button type="submit">Оставить заявку</button>
+    </form>
+    </form>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+  </body>
+</html>
