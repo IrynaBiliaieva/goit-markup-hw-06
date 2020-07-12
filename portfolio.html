@@ -280,14 +280,21 @@
           <!--E-mailing block-->
           <div class="emailing">
             <h2><strong>подпишитесь на рассылку</strong></h2>
-            <form>
-              <input type="email" placeholder="E-mail" />
-              <a href="" class="button primary">
+            <form class="emailing-form">
+              <label>
+                <input
+                  type="email"
+                  class="form-input"
+                  name="mail"
+                  placeholder="Email"
+                />
+              </label>
+              <button type="submit" class="button primary">
                 Подписаться
                 <svg class="icon-send">
                   <use href="./images/sprite.svg#send"></use>
                 </svg>
-              </a>
+              </button>
             </form>
           </div>
         </div>
