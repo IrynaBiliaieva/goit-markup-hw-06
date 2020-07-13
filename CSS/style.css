@@ -616,6 +616,7 @@ a:focus .description {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
+  color: var(--title-text-color);
   margin-top: 40px;
   margin-bottom: 30px;
 }
@@ -647,6 +648,9 @@ a:focus .description {
   padding: 10px 20px;
   padding-left: 42px;
   font: inherit;
+
+  color: var(--primary-text-color);
+
   outline: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -686,7 +690,7 @@ a:focus .description {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: ease all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+  color: var(--primary-text-color);
   resize: none;
   outline: none;
 }
@@ -787,7 +791,7 @@ textarea:not(:placeholder-shown) + .comment-label {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: white;
-
+  color: var(--primary-text-color);
   width: 528px;
   max-height: 100%;
   overflow: auto;
